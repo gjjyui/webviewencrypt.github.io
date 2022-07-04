@@ -1,0 +1,115 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html> 
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+		<meta http-equiv="X-UA-Compatible" content="IE=10,chrome=1" />
+        <meta name="SKYPE_TOOLBAR" content="SKYPE_TOOLBAR_PARSER_COMPATIBLE" />          
+
+		<title>Reliable Controls</title>
+
+        <link rel="stylesheet" media="screen,projection" type="text/css" title="currentTheme" href="@Href("~/144064/rc/themes/rcblack/rcblack.css")" />
+		<link rel="stylesheet" media="screen,projection" type="text/css" href="@Href("~/144064/webview/themes/reliable/rc.css")" />
+        <link rel="stylesheet" media="screen,projection" type="text/css"  href="@Href("~/144064/webview/themes/rcblack/rcblack.css")" />
+        <link rel="stylesheet" media="screen,projection" type="text/css"  href="@Href("~/144064/webview/themes/rcblack/Common.css")" />
+		<link rel="stylesheet" media="print" type="text/css" href="@Href("~/144064/webview/themes/print.css")" />
+
+		<link rel="stylesheet" type="text/css"
+			  media="screen and (max-device-width: 1024px)"
+			  href="@Href("~/144064/rc/themes/mobile/basics.css")" />
+
+        <link rel="shortcut icon" type="image/x-icon" href="@Href("~/favicon.ico")">
+		<link rel="apple-touch-icon" href="@Href("~/globe.png")" />
+
+		<script type="text/javascript">
+			function getCookie(cname) {
+				var name = cname + "=";
+				var ca = document.cookie.split(';');
+				for (var i = 0; i < ca.length; i++) {
+					var c = ca[i];
+					while (c.charAt(0) === ' ')
+						c = c.substring(1);
+					if (c.indexOf(name) !== -1) return c.substring(name.length, c.length);
+				}
+				return "";
+			}
+
+			var dojoConfig = {
+				locale: getCookie('locale'),
+				isDebug:false,
+                async: true,
+				gfxRenderer: "svg,silverlight,vml,canvas",
+				baseUrl: "@Href("~/144064")",
+				packages: [
+					{ name: "dgrid", location: "dgrid/dgrid" },
+                    { name: "dgrid-v2", location: "dgrid-v2" },
+                    { name: "dstore", location: "dstore" },
+					{ name: "dojo", location: "dojo/dojo" },
+					{ name: "dijit", location: "dojo/dijit" },
+					{ name: "dojox", location: "dojo/dojox" },
+                    { name: "put-selector", location: "dgrid/put-selector" },
+					{ name: "rc", location: "rc" },
+					{ name: "webview", location: "webview" },
+                    { name: "xstyle", location: "dgrid/xstyle" }
+				]
+			};
+        </script>
+
+
+    </head>
+    <body class="rc webview home">
+
+		<noscript>
+		   <div class="mpwError mpwJsError">
+			   <h2><span class="rcBigWarningIcon"></span>Your browser has Javascript disabled!</h2>
+			   <p>MACH-ProWeb interface requires Javascript to run.</p>
+			   <p>Enable Javascript on this browser.</p>
+		   </div>
+		</noscript>
+
+
+		<div id="errorContainer" class="mpwError mpwJsError">
+			   <h2><span class="rcBigWarningIcon"></span><span id="errorTitle" ></span></h2>
+			   <p id="errorMessage"></p>
+			   <p id="errorAction"></p>
+		 </div>
+
+		<script type="text/javascript" src="@Href("~/144064/dojo/dojo/dojo.js")"></script>
+		<script type="text/javascript">
+            require(["rc"], function (rc) {
+                rc.appName = "@ActiveDirectoryLogin.Components.ConfigHelperWV.GetUrlSitePath(Request.ApplicationPath)";
+                rc.buildYear = "@ActiveDirectoryLogin.Components.BuildDate.GetBuildYear()";
+
+                require([
+                    "dojo/query",
+                    "dojo/dom-attr",
+                    "webview",
+                    "dojo/i18n!webview/nls/errorMessages",
+                    "dojo/parser",
+                    "dojo/domReady!"
+                ], function (
+                    query,
+                    domAttr,
+                    webview,
+                    wvErrorStrings,
+                    parser
+                ) {
+
+                        // Explicitly parse the page
+                        parser.parse();
+
+                        //make error message
+                        var messageNode = query("#errorContainer")[0];
+                        var title = query("#errorTitle", messageNode)[0];
+                        var message = query("#errorMessage", messageNode)[0];
+                        var action = query("#errorAction", messageNode)[0];
+
+                        domAttr.set(title, "innerHTML", wvErrorStrings.urlErrorTitle);
+                        domAttr.set(message, "innerHTML", wvErrorStrings.urlErrorMessage);
+                        domAttr.set(action, "innerHTML", wvErrorStrings.urlErrorAction);
+
+                    });
+            });
+        </script>
+    </body>
+</html>
+

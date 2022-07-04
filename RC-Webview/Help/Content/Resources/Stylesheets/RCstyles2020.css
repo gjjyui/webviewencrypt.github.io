@@ -1,0 +1,2007 @@
+/*<meta />*/
+
+@namespace MadCap url(http://www.madcapsoftware.com/Schemas/MadCap.xsd);
+
+/*Reliable Controls style sheet*/
+/* 2018 */
+
+@font-face 
+{
+	font-family: Michroma;
+	src: url(Fonts/Michroma.ttf);
+}
+
+@font-face 
+{
+	font-family: OpenSans-Regular;
+	src: url(Fonts/OpenSans-Regular.ttf);
+}
+
+@font-face 
+{
+	font-family: OpenSans-Bold;
+	src: url(Fonts/OpenSans-Bold.ttf);
+}
+
+@font-face 
+{
+	font-family: EurostileLTStdMedium;
+	src: url(fonts/eurostileltstd.otf);
+}
+
+/* DEFAULT styles ********************************************************* */
+
+body
+{
+	color: #2b2a2a;
+	line-height: 140%;
+	font-size: 0.9em;
+	font-family: OpenSans-Regular, Arial, sans-serif;
+}
+
+a.MCBreadcrumbsLink
+{
+	font-style: italic;
+	text-decoration: underline;
+	color: #364f73;
+}
+
+a.MCBreadcrumbsLink:link
+{
+	color: #364f73;
+}
+
+a.MCBreadcrumbsLink:visited
+{
+	color: #84a7b3;
+}
+
+a.MCBreadcrumbsLink:hover
+{
+	color: #84a7b3;
+}
+
+a:link
+{
+	color: #364f73;
+	font-weight: normal;
+	text-decoration: none;
+}
+
+a:visited
+{
+	color: #84a7b3;
+	font-weight: normal;
+}
+
+a:hover
+{
+	color: #84a7b3;
+	font-weight: normal;
+}
+
+b
+{
+	font-weight: bold;
+}
+
+strong
+{
+	font-weight: bold;
+}
+
+caption
+{
+	color: #a9a9a9;
+	text-align: left;
+	padding-bottom: 15px;
+	font-size: 90%;
+}
+
+code
+{
+	line-height: 120%;
+	font: Consolas;
+	font-family: Consolas;
+	font-size: 100%;
+}
+
+pre
+{
+	line-height: 120%;
+	font: Consolas;
+	font-family: Consolas;
+	font-size: 100%;
+}
+
+span.ui-element
+{
+	font-weight: bold;
+}
+
+/* Styles required for the Bulletin-Print.flpgl page layout  */
+
+/* span.ProductBulletin
+{
+	font-family: Michroma, sans-serif;
+	letter-spacing: 2px;
+	font-size: 1.5em;
+	font-weight: bold;
+	line-height: 1.5em;
+} */
+
+p.docname
+{
+	font-size: 1.5em %;
+	font-family: Michroma, sans-serif;
+	font-weight: bold;
+	line-height: 1.5em;
+	margin-left: 0px;
+	text-align: left;
+}
+
+p.docnumber
+{
+	font-size: 80%;
+	font-weight: bold;
+	font-style: normal;
+	margin-left: 0px;
+	font-family: 'Open Sans', Calibri, 'font-family: ' Open Sans;
+	text-align: left;
+}
+
+p.bulletinFooter
+{
+	font-size: 80%;
+	font-family: 'Open Sans', Calibri, 'font-family: ' Open Sans;
+	margin-left: 0px;
+}
+
+/* End of styles for bulletin header  */
+
+h1
+{
+	margin-bottom: 30px;
+	font-family: Michroma, sans-serif;
+	page-break-after: avoid;
+	letter-spacing: 2px;
+	margin-top: 0px;
+	font-size: 1.5em;
+	line-height: 1.5em;
+}
+
+h1.no-pg-break
+{
+	margin-bottom: 30px;
+	font-family: Michroma, sans-serif;
+	page-break-after: avoid;
+	letter-spacing: 2px;
+	margin-top: 0px;
+	font-size: 1.5em;
+	line-height: 1.5em;
+}
+
+h1.AppNotice
+{
+	font-family: Michroma, sans-serif;
+	page-break-after: avoid;
+	letter-spacing: 2px;
+	font-size: 1.5em;
+	line-height: 1.5em;
+	margin-bottom: 12px;
+	margin-top: 14px;
+}
+
+h1.contents
+{
+	margin-bottom: 30px;
+	font-family: Michroma, sans-serif;
+	page-break-after: avoid;
+	letter-spacing: 2px;
+	margin-top: 0px;
+	font-size: 1.5em;
+	line-height: 1.5em;
+	mc-heading-level: 0;
+}
+
+h1.short-contents
+{
+	margin-bottom: 30px;
+	font-family: Michroma, sans-serif;
+	page-break-after: avoid;
+	letter-spacing: 2px;
+	margin-top: 0px;
+	font-size: 1.5em;
+	line-height: 1.5em;
+	mc-heading-level: 0;
+}
+
+/* h1.noTOC is used to prevent CBAS topics from appearing in the PDF TOC. */
+/* This style is a copy of the h1 above. */
+
+h1.noTOC
+{
+	margin-bottom: 30px;
+	font-family: Michroma, sans-serif;
+	page-break-after: avoid;
+	letter-spacing: 2px;
+	margin-top: 0px;
+	font-size: 1.5em;
+	line-height: 1.5em;
+}
+
+h2
+{
+	margin-bottom: 8px;
+	margin-top: 20px;
+	font-family: Michroma, sans-serif;
+	page-break-after: avoid;
+	letter-spacing: 2px;
+	font-size: 1.2em;
+	line-height: 1.2em;
+}
+
+h3
+{
+	letter-spacing: 2px;
+	line-height: 1.17em;
+}
+
+/* h3.noTOC is used to prevent CBAS topics from appearing in the PDF TOC. */
+/* This style is a copy of the h1 above. */
+
+h3.noTOC
+{
+	margin-bottom: 30px;
+	font-family: Michroma, sans-serif;
+	page-break-after: avoid;
+	letter-spacing: 2px;
+	margin-top: 0px;
+	font-size: 1.5em;
+	line-height: 1.5em;
+}
+
+h4
+{
+	letter-spacing: 1px;
+}
+
+h5
+{
+	letter-spacing: 1px;
+}
+
+div.embeddedhelp
+{
+	
+}
+
+div.important
+{
+	background-repeat: no-repeat;
+	background-color: #dcdcdc;
+	border-radius: 5px;
+	margin-bottom: 5px;
+	margin-top: 5px;
+	padding: 15px;
+	mc-auto-number-position: inside-head;
+	mc-auto-number-format: '{b}Important: {/b}';
+}
+
+div.notes
+{
+	background-repeat: no-repeat;
+	background-color: #dcdcdc;
+	border-radius: 5px;
+	margin-bottom: 5px;
+	margin-top: 5px;
+	padding: 15px;
+	mc-auto-number-position: inside-head;
+	mc-auto-number-format: '{b}Notes: {/b}';
+}
+
+div.note-multiparagraph
+{
+	background-repeat: no-repeat;
+	background-color: #dcdcdc;
+	border-radius: 5px;
+	margin-bottom: 5px;
+	margin-top: 5px;
+	padding: 15px;
+	mc-auto-number-position: inside-head;
+	mc-auto-number-format: '{b}Note: {/b}';
+}
+
+div.outdent
+{
+	
+}
+
+div.tips
+{
+	background-repeat: no-repeat;
+	background-color: #dcdcdc;
+	border-radius: 5px;
+	margin-bottom: 5px;
+	margin-top: 5px;
+	padding: 15px;
+	mc-auto-number-position: inside-head;
+	mc-auto-number-format: '{b}Tips: {/b}';
+}
+
+div.tip-multiparagraph
+{
+	background-repeat: no-repeat;
+	background-color: #dcdcdc;
+	border-radius: 5px;
+	margin-bottom: 5px;
+	margin-top: 5px;
+	padding: 15px;
+	mc-auto-number-position: inside-head;
+	mc-auto-number-format: '{b}Tip: {/b}';
+}
+
+div.KeepTogether
+{
+	page-break-inside: avoid;
+}
+
+div.Indent
+{
+	margin-left: 20px;
+}
+
+div.spec
+{
+	margin-top: 20px;
+	margin-bottom: 20px;
+	margin-left: 0px;
+	padding: 15px;
+	background-color: #dcdcdc;
+	border-radius: 5px;
+	mc-auto-number-format: '{b}Specification: {/b}';
+	padding-top: 15px;
+	top: 150px;
+	mc-auto-number-position: inside-head;
+}
+
+div.specbody
+{
+	margin-top: 10px;
+	margin-bottom: 10px;
+	margin-left: 20px;
+	padding: 15px;
+}
+
+/* image style classes/properties */
+
+img
+{
+	/* max-width: 95%; */
+	max-width: 100%;
+}
+
+img.callout-nbr
+{
+	width: 30px;
+	Height: 30px;
+}
+
+img.callout-nbr-small
+{
+	width: 15px;
+	Height: 15px;
+}
+
+img.full-width
+{
+	margin-top: 10px;
+	margin-bottom: 6px;
+	/* width: 95%; */
+	width: 95%;
+}
+
+img.seventyfivepercent
+{
+	width: 75%;
+}
+
+img.fiftypercent
+{
+	width: 50%;
+}
+
+img.twentyfivepercent
+{
+	width: 25%;
+}
+
+/* image styles 6/29/20. Not using max-width so images not regen'd if image is larger. */
+/* using percentage for relative sizes in HTML output */
+
+img.img100
+{
+	width: 17%;
+}
+
+img.img150
+{
+	width: 25%;
+}
+
+img.img200
+{
+	width: 33%;
+}
+
+img.img250
+{
+	width: 42%;
+	/*	max-width: 250px; */
+}
+
+img.img300
+{
+	width: 50%;
+}
+
+img.img320
+{
+	width: 54%;
+	/*	max-width: 320px; */
+}
+
+img.img350
+{
+	width: 58%;
+}
+
+img.img400
+{
+	width: 67%;
+	/*	max-width: 400px; */
+}
+
+img.img450
+{
+	width: 75%;
+}
+
+img.img500
+{
+	width: 83%;
+	/*	max-width: 500px; */
+}
+
+img.img520
+{
+	width: 87%;
+	/*	max-width: 520px;*/
+}
+
+img.img550
+{
+	width: 92%;
+}
+
+img.img600
+{
+	width: 100%;
+	/*	max-width: 600px; */
+}
+
+img.inline_icon
+{
+	width: auto;
+	vertical-align: baseline;
+	height: 16px;
+}
+
+/* end of updated image styles */
+/* list style classes/properties */
+
+li
+{
+	margin: 1.12em;
+	margin-right: 0px;
+	/*	padding-left: 10px; */
+	margin-left: 0px;
+	margin-bottom: 0px;
+	margin-top: 0px;
+	mc-hyphenate: never;
+}
+
+li.last
+{
+	margin-bottom: 14px;
+}
+
+/* to control spacing of a paragraph item in a list rl 6/13/19 */
+
+li > p
+{
+	margin-bottom: 4px;
+	margin-top: 0px;
+}
+
+/* ol>li padding is intended to control the space between the number and the text for a list item */
+
+ol > li
+{
+	padding-left: 5px;
+	padding-top: 3px;
+	padding-bottom: 3px;
+}
+
+ol,
+ul
+{
+	margin-left: 0px;
+}
+
+ol
+{
+	margin-bottom: 0px;
+	list-style-position: outside;
+	margin-top: 6px;
+	line-height: 140%;
+}
+
+ul
+{
+	line-height: 160%;
+	list-style-type: none;
+	/*	list-style-type: disc; */
+	margin: 0px;
+}
+
+ul > li
+{
+	padding: 3px 0px 3px 0px;
+	/* 10/31 test of vertical position of bullet relative to item text */
+	list-style: disc;
+}
+
+ol ol,
+ul ol
+{
+	margin-left: 0px;
+	padding-left: 17px;
+	list-style-type: lower-alpha;
+}
+
+ol ul,
+ul ul
+{
+	padding-left: 15px;
+	list-style-type: disc;
+}
+
+ul ul
+{
+	margin-left: 0px;
+}
+
+ol ul
+{
+	margin-left: 4px;
+}
+
+/* end of list style classes/properties */
+/* Old styles used for list items */
+
+p.stepNumbers1
+{
+	list-style-position: outside;
+	text-align: left;
+	mc-auto-number-position: outside-head;
+	vertical-align: 0px;
+	display: block;
+	text-indent: 0px;
+	padding-left: 4px;
+	mc-auto-number-offset: 20px;
+	top: 18px;
+	bottom: 18px;
+	margin-right: 0;
+	margin-bottom: 8px;
+	margin-top: 0px;
+	line-height: 180%;
+	margin-left: 24px;
+	mc-auto-number-format: '{b}{color #325D80}{n=1}  {/color}{/b}';
+}
+
+p.stepNumbers
+{
+	mc-auto-number-format: '{b}{color #325D80}{n+}  {/color}{/b}';
+	list-style-position: outside;
+	text-align: left;
+	mc-auto-number-position: outside-head;
+	vertical-align: 0px;
+	display: block;
+	text-indent: 0px;
+	padding-left: 4px;
+	mc-auto-number-offset: 20px;
+	top: 18px;
+	bottom: 18px;
+	margin-right: 0;
+	margin-bottom: 8px;
+	margin-top: 0px;
+	line-height: 180%;
+	margin-left: 24px;
+}
+
+p.stepLast
+{
+	mc-auto-number-format: '{b}{color #325D80}{n+}  {/color}{/b}';
+	list-style-position: outside;
+	text-align: left;
+	mc-auto-number-position: outside-head;
+	vertical-align: 0px;
+	display: block;
+	text-indent: 0px;
+	padding-left: 4px;
+	mc-auto-number-offset: 20px;
+	top: 18px;
+	bottom: 18px;
+	margin-right: 0;
+	margin-bottom: 8px;
+	line-height: 150%;
+	margin-top: 0px;
+	padding-bottom: 10px;
+	color: #000000;
+	border-bottom-color: #698196;
+	border-bottom-style: solid;
+	border-bottom-width: 1px;
+	margin-left: 24px;
+}
+
+/* End of Old styles used for list items */
+/* paragraph style classes/properties */
+
+p
+{
+	margin-bottom: 8px;
+	margin-top: 8px;
+}
+
+p.bold
+{
+	font-weight: bold;
+	font-style: normal;
+}
+
+p.code
+{
+	line-height: 120%;
+	font: Consolas;
+	font-family: Consolas;
+	font-size: 100%;
+}
+
+p.Figure
+{
+	margin-bottom: 20px;
+	/* mc-auto-number-format: '{color #696969}{i}Figure: {/i}{/color}'; */
+	mc-auto-number-format: '{i}Figure: {/i}';
+	color: #a9a9a9;
+}
+
+p.important
+{
+	margin-top: 20px;
+	margin-bottom: 20px;
+	margin-left: 0px;
+	padding: 15px;
+	background-color: #dcdcdc;
+	border-radius: 5px;
+	mc-auto-number-format: '{b}Important: {/b}';
+}
+
+p.note
+{
+	margin-top: 20px;
+	margin-bottom: 20px;
+	margin-left: 0px;
+	padding: 15px;
+	background-color: #dcdcdc;
+	border-radius: 5px;
+	mc-auto-number-format: '{b}Note: {/b}';
+}
+
+p.tip
+{
+	margin-top: 20px;
+	margin-bottom: 20px;
+	margin-left: 0px;
+	padding: 15px;
+	background-color: #dcdcdc;
+	border-radius: 5px;
+	mc-auto-number-format: '{b}Tip: {/b}';
+}
+
+/* copied from 2019CatSubsStyles.css -adds bold font to the text. Padding-bottom updated for spacing in HTML output. */
+
+p.CatsSubsSnippetHeader
+{
+	margin-left: 1;
+	margin-right: 1;
+	margin: 0px;
+	border-top-length: 0px;
+	border: solid 0px #000000;
+	max-height: 0px;
+	font-style: normal;
+	top: 0px;
+	padding-top: 2;
+	height: 5px;
+	line-height: 105%;
+	padding: 0px;
+	padding-right: 1px;
+	padding-left: 1px;
+	font-weight: bold;
+	font-size: 11pt;
+	margin-top: 8px;
+	margin-bottom: 8px;
+	padding-bottom: 12px;
+}
+
+p.Subheading
+{
+	line-height: 120%;
+	/* font-family: OpenSans-Regular, Arial, sans-serif; */
+	/* added Michroma so the font style and size of the Subheading differs from p.term */
+	font-family: Michroma, sans-serif;
+	margin-left: 0px;
+	margin-top: 20px;
+	margin-bottom: 20px;
+	font-weight: bold;
+	font-size: 1.12em;
+}
+
+p.term
+{
+	color: #2b2a2a;
+	font-weight: bold;
+	mc-next-tag: p;
+	mc-next-class: description;
+	page-break-after: avoid;
+	margin-top: 8px;
+	margin-bottom: 4px;
+}
+
+p.description
+{
+	margin-bottom: 8px;
+	mc-next-tag: p;
+	mc-next-class: term;
+	margin-left: 0.9em;
+	margin-top: 4px;
+	page-break-before: avoid;
+}
+
+/* Styles for text in headers and footers */
+
+p.footer-content
+{
+	color: #a9a9a9;
+}
+
+p.header-content
+{
+	color: #a9a9a9;
+}
+
+/* End of text for headers and footers */
+
+p.online_copyright
+{
+	border-top-style: solid;
+	border-top-width: 1px;
+	border-top-color: #9fa0a4;
+	margin-top: 14px;
+	padding-top: 10px;
+	font-size: 80%;
+}
+
+p.online_publishdate
+{
+	margin-top: 14px;
+	padding-top: 10px;
+	font-size: 80%;
+}
+
+/* end of paragraph style classes/properties */
+/* DEFAULT MadCap styles with custom properties */
+
+span.mc-variable.footerdate
+{
+	
+}
+
+span.mc-variable.footerdocname
+{
+	
+}
+
+MadCap|xref
+{
+	text-decoration: underline;
+	line-height: 160%;
+	font-size: 100%;
+	color: #3273b7;
+	font-weight: bolder;
+	mc-format: '{para}';
+}
+
+MadCap|xref:hover
+{
+	color: #1f73b7;
+	mc-format: '{para}';
+}
+
+/* For use in the Intro section of the MSIM to include a reference to a specific image. */
+
+MadCap|xref.figure-nbr
+{
+	mc-format: '{paranum} {para}';
+}
+
+MadCap|breadcrumbsProxy
+{
+	border-bottom: none;
+	font-style: italic;
+	mc-breadcrumbs-prefix: 'You are here: ';
+	color: #2b2a2a;
+	font-size: 0.90em;
+}
+
+MadCap|tocProxy
+{
+	color: #2b2a2a;
+}
+
+span.mc-variable
+{
+	
+}
+
+/* End of DEFAULT MadCap styles with custom properties */
+/* DEFAULT table styles with custom properties */
+/* font/font-family inherited from body style */
+
+td
+{
+	margin: 8px;
+	vertical-align: top;
+	color: #2b2a2a;
+	font-size: 100%;
+	line-height: 160%;
+}
+
+th
+{
+	margin-bottom: 8px;
+	margin-top: 8px;
+	text-align: left;
+	font-size: 100%;
+	line-height: 160%;
+}
+
+tr
+{
+	color: #2b2a2a;
+	font-size: 100%;
+	line-height: 160%;
+}
+
+tbody
+{
+	color: #2b2a2a;
+	font-size: 100%;
+	line-height: 160%;
+}
+
+/* End of DEFAULT table styles with custom properties */
+/* DEFAULT Relationship Table styles with custom properties */
+
+MadCap|relationshipsHeading
+{
+	margin-top: 30px;
+	font-family: OpenSans-Regular, Arial, sans-serif;
+	font-size: 1.0em;
+}
+
+MadCap|relationshipsHeading.concept
+{
+	mc-label: 'About';
+	font-size: 1.0em;
+	font-weight: bold;
+}
+
+MadCap|relationshipsHeading.reference
+{
+	mc-label: 'More details';
+	font-size: 1.0em;
+	font-weight: bold;
+}
+
+MadCap|relationshipsHeading.task
+{
+	mc-label: 'How to';
+	font-size: 1.0em;
+	font-weight: bold;
+}
+
+MadCap|relationshipsItem
+{
+	margin-left: 5;
+	font-family: OpenSans-Regular, Arial, sans-serif;
+	font-size: 1.0em;
+}
+
+MadCap|relationshipsProxy
+{
+	font-family: OpenSans-Regular, Arial, sans-serif;
+}
+
+MadCap|relationshipsProxy.relationshipsBox
+{
+	
+}
+
+/* End of DEFAULT Relationship Table styles with custom properties */
+/* Two column responsive layout  **********************************************************/
+
+div.sideContent
+{
+	float: right;
+	width: 30.00%;
+	margin-bottom: 30px;
+	margin-left: 10px;
+	margin-top: 30px;
+	margin-right: 10px;
+}
+
+div.ContentRow
+{
+	mc-grid-row: true;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+div.ContentRow::before
+{
+	content: ' ';
+	display: table;
+}
+
+div.ContentRow::after
+{
+	content: ' ';
+	display: table;
+	clear: both;
+}
+
+div.ContentRow > div
+{
+	float: left;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+div.ContentRow > div:nth-child(1)
+{
+	width: 70%;
+	margin-left: 5%;
+}
+
+div.ContentRow > div:nth-child(2)
+{
+	width: 20%;
+	margin-left: 5%;
+}
+
+div.NewRowClass1	/*This is a custom responsive layout row style (div class) in your stylesheet. To provide your own description for this style: (1) Open the stylesheet; (2) Find and select the div class with this name; and (3) In the Comment field, replace this text with your own. For more information on adding comments to styles, see the online Help.*/
+{
+	mc-grid-row: true;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+div.NewRowClass1::before
+{
+	content: ' ';
+	display: table;
+}
+
+div.NewRowClass1::after
+{
+	content: ' ';
+	display: table;
+	clear: both;
+}
+
+div.NewRowClass1 > div
+{
+	float: left;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+div.NewRowClass1 > div:nth-child(1)
+{
+	width: 33.33333%;
+	margin-left: 0%;
+}
+
+div.NewRowClass1 > div:nth-child(2)
+{
+	width: 33.33333%;
+	margin-left: 0%;
+}
+
+div.NewRowClass1 > div:nth-child(3)
+{
+	width: 33.33333%;
+	margin-left: 0%;
+}
+
+span.SearchHighlight
+{
+	background-color: #fffacd;
+}
+
+p.TOC4
+{
+	margin-right: 3pt;
+}
+
+p.TOC3
+{
+	margin-right: 3pt;
+}
+
+p.TOC2
+{
+	margin-right: 3pt;
+}
+
+p.TOC1
+{
+	page-break-after: avoid;
+}
+
+p.TOC5
+{
+	margin-right: 3pt;
+}
+
+p.TOC6
+{
+	margin-right: 3pt;
+}
+
+/* PRINT styles **********************************************************/
+
+@media print
+{
+	body
+	{
+		margin: 8px;
+		margin-bottom: auto;
+		font-size: 10pt;
+		line-height: 14pt;
+		margin-left: 30px;
+	}
+
+	caption
+	{
+		text-align: left;
+		padding-bottom: 10px;
+		padding-top: 10px;
+		mc-caption-continuation: 'continued';
+		mc-caption-repeat: true;
+		/* mc-auto-number-format: 'GT:{color #a9a9a9}{i}Table {n+}: {/i}{/color}'; */
+		mc-auto-number-format: 'GT:{i}Table {n+}: {/i}';
+		font-size: 10pt;
+	}
+
+	code
+	{
+		font-size: 10pt;
+	}
+
+	pre
+	{
+		font-size: 10pt;
+	}
+
+	div.noPrint
+	{
+		display: none;
+	}
+
+	div.important
+	{
+		background-image: none;
+		background-color: #dcdcdc;
+		padding: 10px;
+		background-origin: content-box;
+	}
+
+	div.notes
+	{
+		background-image: none;
+		background-color: #dcdcdc;
+		padding: 10px;
+		background-origin: content-box;
+	}
+
+	div.note-multiparagraph
+	{
+		background-image: none;
+		background-color: #dcdcdc;
+		padding: 10px;
+		background-origin: content-box;
+	}
+
+	/* This div.outdent moves the nested content to the left in line with heading tags. */
+	/* It is intended for tables where the normal table width on a page causes text to break in table cells. */
+
+	div.outdent
+	{
+		margin-left: -25pt;
+	}
+
+	div.tips
+	{
+		background-image: none;
+		padding: 10px;
+		border-top-style: solid;
+		background-color: #dcdcdc;
+	}
+
+	div.tip-multiparagraph
+	{
+		background-image: none;
+		padding: 10px;
+		border-top-style: solid;
+		background-color: #dcdcdc;
+	}
+
+	/* Styles required for the Bulletin-Print.flpgl page layout  */
+
+	/*	span.ProductBulletin
+	{
+		mc-hyphenate: never;
+		letter-spacing: 2px;
+		line-height: 22pt;
+		padding-left: 0%;
+		font-style: normal;
+		font-weight: bold;
+		font-size: 18pt;
+		page-break-before: avoid;
+	} */
+
+	p.docname
+	{
+		margin-left: 0px;
+		letter-spacing: 2px;
+		line-height: 18pt;
+		font-style: normal;
+		font-weight: bold;
+		font-size: 16pt;
+	}
+
+	p.docnumber
+	{
+		margin-left: 0px;
+	}
+
+	p.boldLeft
+	{
+		margin-left: 0px;
+	}
+
+	p.bulletinFooter
+	{
+		
+	}
+
+	/* End of styles for bulletin header  */
+
+	h1
+	{
+		page-break-after: avoid;
+		mc-hyphenate: never;
+		letter-spacing: 2px;
+		font-size: 22pt;
+		line-height: 26pt;
+		margin-bottom: 10pt;
+		margin-top: 16pt;
+		padding-left: 0%;
+		margin-left: -25pt;
+		/* font: 'Eurostile LT Std Medium'; */
+		font-style: normal;
+		font-weight: normal;
+		font-family: EurostileLTStdMedium;
+		font: Eurostile LT Std;
+	}
+
+	h1.no-pg-break
+	{
+		page-break-after: avoid;
+		mc-hyphenate: never;
+		letter-spacing: 2px;
+		margin-bottom: 10pt;
+		margin-top: 16pt;
+		padding-left: 0%;
+		margin-left: -25pt;
+		/* font: 'Eurostile LT Std Medium'; */
+		font-style: normal;
+		font-weight: normal;
+		font-family: EurostileLTStdMedium;
+		font: Eurostile LT Std;
+		page-break-before: avoid;
+		font-size: 22pt;
+		line-height: 26pt;
+	}
+
+	h1.AppNotice
+	{
+		page-break-after: avoid;
+		mc-hyphenate: never;
+		letter-spacing: 2px;
+		margin-bottom: 10pt;
+		margin-top: 16pt;
+		padding-left: 0%;
+		margin-left: -25pt;
+		/* font: 'Eurostile LT Std Medium'; */
+		font-style: normal;
+		font-weight: normal;
+		font-family: EurostileLTStdMedium;
+		font: Eurostile LT Std;
+		page-break-before: avoid;
+		font-size: 18pt;
+		line-height: 22pt;
+	}
+
+	h1.contents
+	{
+		page-break-after: avoid;
+		mc-hyphenate: never;
+		letter-spacing: 2px;
+		margin-bottom: 10pt;
+		margin-top: 16pt;
+		padding-left: 0%;
+		margin-left: -25pt;
+		/* font: 'Eurostile LT Std Medium'; */
+		font-style: normal;
+		font-weight: normal;
+		font-family: EurostileLTStdMedium;
+		font: Eurostile LT Std;
+		line-height: 26pt;
+		font-size: 22pt;
+	}
+
+	h1.short-contents
+	{
+		page-break-after: avoid;
+		mc-hyphenate: never;
+		letter-spacing: 2px;
+		margin-bottom: 10pt;
+		margin-top: 16pt;
+		padding-left: 0%;
+		margin-left: -25pt;
+		/* font: 'Eurostile LT Std Medium'; */
+		font-style: normal;
+		font-weight: normal;
+		font-family: EurostileLTStdMedium;
+		font: Eurostile LT Std;
+		line-height: 22pt;
+		font-size: 18pt;
+	}
+
+	h1.noTOC
+	{
+		page-break-after: avoid;
+		mc-hyphenate: never;
+		/* font: 'Eurostile LT Std Medium'; */
+		font: 'Eurostile LT Std';
+		font-family: EurostileLTStdMedium;
+		font-style: normal;
+		letter-spacing: 2px;
+		font-size: 22pt;
+		line-height: 26pt;
+		margin-bottom: 10pt;
+		margin-top: 16pt;
+		padding-left: 0%;
+		margin-left: -25pt;
+		mc-heading-level: 0;
+		font-style: normal;
+		font-weight: normal;
+	}
+
+	h2
+	{
+		page-break-after: avoid !important;
+		page-break-inside: avoid !important;
+		letter-spacing: 2px;
+		mc-hyphenate: never;
+		/* font: 'Eurostile LT Std Medium'; */
+		font: 'Eurostile LT Std';
+		font-family: EurostileLTStdMedium;
+		font-style: normal;
+		padding-bottom: 10px;
+		font-size: 16pt;
+		line-height: 20pt;
+		margin-left: -25pt;
+		margin-bottom: 8pt;
+		margin-top: 10pt;
+		font-weight: normal;
+	}
+
+	h3
+	{
+		page-break-after: avoid !important;
+		page-break-inside: avoid !important;
+		letter-spacing: 2px;
+		mc-hyphenate: never;
+		/* font: 'Eurostile LT Std Medium'; */
+		font: 'Eurostile LT Std';
+		font-family: EurostileLTStdMedium;
+		font-style: normal;
+		padding-bottom: 10px;
+		font-size: 14pt;
+		line-height: 18pt;
+		margin-bottom: 10pt;
+		margin-top: 16pt;
+		margin-left: -25pt;
+		font-weight: normal;
+	}
+
+	h3.noTOC
+	{
+		page-break-after: avoid;
+		mc-hyphenate: never;
+		/* font: 'Eurostile LT Std Medium'; */
+		font: 'Eurostile LT Std';
+		font-family: EurostileLTStdMedium;
+		font-style: normal;
+		letter-spacing: 2px;
+		font-size: 18pt;
+		line-height: 22pt;
+		margin-bottom: 10pt;
+		margin-top: 16pt;
+		padding-left: 0%;
+		margin-left: -25pt;
+		mc-heading-level: 0;
+		font-weight: normal;
+	}
+
+	h4
+	{
+		page-break-after: avoid !important;
+		page-break-inside: avoid !important;
+		mc-hyphenate: never;
+		/* font: 'Eurostile LT Std Medium'; */
+		font: 'Eurostile LT Std';
+		font-family: EurostileLTStdMedium;
+		font-style: normal;
+		line-height: 120%;
+		padding-bottom: 10px;
+		font-size: 12pt;
+		margin-bottom: 10pt;
+		margin-left: -25pt;
+		letter-spacing: 0px;
+		margin-top: 14pt;
+		font-weight: normal;
+	}
+
+	h5
+	{
+		page-break-after: avoid !important;
+		page-break-inside: avoid !important;
+		letter-spacing: 2px;
+		mc-hyphenate: never;
+		/* font: 'Eurostile LT Std Medium'; */
+		font: 'Eurostile LT Std';
+		font-family: EurostileLTStdMedium;
+		font-style: normal;
+		line-height: 120%;
+		padding-bottom: 10px;
+		margin-top: 14pt;
+		font-size: 12pt;
+		font-weight: normal;
+		margin-bottom: 8pt;
+	}
+
+	h6
+	{
+		page-break-after: avoid !important;
+		page-break-inside: avoid !important;
+		letter-spacing: 2px;
+		mc-hyphenate: never;
+		/* font: 'Eurostile LT Std Medium'; */
+		font: 'Eurostile LT Std';
+		font-family: EurostileLTStdMedium;
+		font-style: normal;
+		line-height: 120%;
+		padding-bottom: 10px;
+		margin-top: 14pt;
+		font-size: 12pt;
+		font-weight: normal;
+		margin-bottom: 8pt;
+	}
+
+	img
+	{
+		/* max-width: 600px; */
+	}
+
+	img.callout-nbr
+	{
+		width: 24px;
+		Height: 24px;
+	}
+
+	img.callout-nbr-small
+	{
+		width: 12px;
+		Height: 12px;
+	}
+
+	img.full-width
+	{
+		/* uses 100% and margins from default */
+	}
+
+	img.seventyfivepercent
+	{
+		
+	}
+
+	img.fiftypercent
+	{
+		
+	}
+
+	img.twentyfivepercent
+	{
+		
+	}
+
+	img.inline_icon
+	{
+		height: 9pt;
+	}
+
+	/* new image styles 6/29/20. Not using max-width so images not regen'd if image is larger. */
+
+	img.img100
+	{
+		width: 100px;
+	}
+
+	img.img150
+	{
+		width: 150px;
+	}
+
+	img.img200
+	{
+		width: 200px;
+	}
+
+	img.img250
+	{
+		width: 250px;
+	}
+
+	img.img300
+	{
+		width: 300px;
+	}
+
+	img.img320
+	{
+		width: 320px;
+	}
+
+	img.img350
+	{
+		width: 350px;
+	}
+
+	img.img400
+	{
+		width: 400px;
+	}
+
+	img.img450
+	{
+		width: 450px;
+	}
+
+	img.img500
+	{
+		width: 500px;
+	}
+
+	img.img520
+	{
+		width: 520px;
+	}
+
+	img.img550
+	{
+		width: 550px;
+	}
+
+	img.img600
+	{
+		width: 600px;
+	}
+
+	/* end of new image styles */
+
+	li
+	{
+		padding-left: 0px;
+		font-size: 10pt;
+		line-height: 14pt;
+		margin-bottom: 0pt;
+		margin-top: 0pt;
+	}
+
+	li.last
+	{
+		margin-bottom: 10pt;
+	}
+
+	li.page_break_before
+	{
+		page-break-before: always;
+	}
+
+	/* ol>li padding in the default medium is set to 20px but it's not required in the print medium */
+
+	ol > li
+	{
+		padding: 2pt 0pt;
+	}
+
+	ol,
+	ul
+	{
+		font-size: 10pt;
+		margin-bottom: 0pt;
+		margin-top: 6pt;
+	}
+
+	ol
+	{
+		margin-left: 24pt;
+		/* font-size: 12pt; */
+		margin-top: 3pt;
+	}
+
+	ul
+	{
+		margin-left: 18pt;
+		/* font-size: 12pt; */
+	}
+
+	ul > li
+	{
+		padding: 2pt 0pt;
+	}
+
+	ol ol,
+	ol ul,
+	ul ol,
+	ul ul
+	{
+		padding-left: 0pt;
+		margin-left: 18pt;
+	}
+
+	/* PRINT MadCap generated styles ********************************************************* */
+
+	MadCap|tocProxy
+	{
+		border-top: none;
+		margin-right: 0.25in;
+		color: #696969;
+	}
+
+	span.mc-variable.footerdate
+	{
+		/* font-size: 9px; */
+		color: #a9a9a9;
+	}
+
+	span.mc-variable.footerdocname
+	{
+		/* color: #000000; */
+		color: #a9a9a9;
+	}
+
+	MadCap|xref
+	{
+		font-weight: normal;
+		text-decoration: none;
+		font-family: OpenSans-Regular, Arial, sans-serif;
+		color: #000000;
+		mc-format: '{quote}{para}{quote} {pageref}';
+	}
+
+	/* For use in the Intro section of the MSIM to include a reference to a specific image. */
+
+	MadCap|xref.figure-nbr
+	{
+		mc-format: '{paranumonly}';
+	}
+
+	p
+	{
+		margin-top: 8px;
+		/*		mc-leader-indent: 0pt;
+		mc-hyphenate-shortest-word: 0;
+		mc-hyphenate-shortest-prefix: 0; */
+		mc-hyphenate: never;
+		/*		margin-left: 30px; */
+		margin-bottom: 4px;
+	}
+
+	/* copied from 2019CatSubsStyles.css -adds bold font to the text. */
+
+	p.CatsSubsSnippetHeader
+	{
+		/* margin-left is used in the 2019CatSubsStyle.css but it's not required for Hardware and Software docs */
+		margin-left: 0px;
+		text-indent: 0px;
+		/* padding-left is used in the 2019CatSubsStyle.css but it's not required for Hardware and Software docs */
+		/* padding-left: 5px; */
+		padding-left: 0px;
+		padding-bottom: 1px;
+		padding-top: 5px;
+		page-break-after: avoid !important;
+		margin-bottom: 4px;
+	}
+
+	/* Styles for text in headers and footers */
+
+	p.footer-content
+	{
+		font-size: 9pt;
+		line-height: 13pt;
+	}
+
+	p.header-content
+	{
+		
+	}
+
+	/* End of text for headers and footers */
+
+	p.stepLast
+	{
+		border-bottom-width: 1px;
+	}
+
+	p.list_item
+	{
+		margin-bottom: 6pt;
+	}
+
+	p.code
+	{
+		font-size: 10pt;
+	}
+
+	p.Figure
+	{
+		page-break-before: avoid;
+		page-break-inside: avoid;
+		margin-bottom: 20px;
+		font-style: normal;
+		padding-bottom: 10px;
+		margin-top: 0px;
+		margin-right: 0px;
+		/* mc-auto-number-format: 'GF:{color #a9a9a9}{i}Figure {n+}: {/i}{/color}'; */
+		mc-auto-number-format: 'GF:{i}Figure {n+}: {/i}';
+		color: #a9a9a9;
+	}
+
+	p.term
+	{
+		
+	}
+
+	p.description
+	{
+		margin-left: 10pt;
+		margin-top: 2px;
+	}
+
+	/*	div.embeddedhelp
+	{
+		
+	} */
+
+	p.Subheading
+	{
+		line-height: 120%;
+		page-break-after: avoid;
+		page-break-inside: avoid;
+		margin-bottom: 10pt;
+		margin-top: 16pt;
+		letter-spacing: 0px;
+		/* added Eurostile so the font style and size of the Subheading differs from p.term */
+		/* font: 'Eurostile LT Std Medium'; */
+		font: 'Eurostile LT Std';
+		font-family: EurostileLTStdMedium;
+		font-size: 12pt;
+		font-style: normal;
+		font-weight: normal;
+	}
+
+	p.important
+	{
+		margin-top: 10px;
+		margin-bottom: 10px;
+		padding-right: 10px;
+		padding-top: 10px;
+		padding-bottom: 10px;
+		line-height: 160%;
+		background-origin: content-box;
+		background-image: none;
+		frame-break-inside: avoid;
+		page-break-inside: avoid;
+		padding-left: 10px;
+		padding: 10px;
+		mc-auto-number-format: '{b}Important: {/b}';
+	}
+
+	p.note
+	{
+		margin-top: 10px;
+		margin-bottom: 10px;
+		padding-right: 10px;
+		padding-top: 10px;
+		padding-bottom: 10px;
+		line-height: 160%;
+		background-origin: content-box;
+		background-image: none;
+		frame-break-inside: avoid;
+		page-break-inside: avoid;
+		padding-left: 10px;
+		padding: 10px;
+		mc-auto-number-format: '{b}Note: {/b}';
+	}
+
+	p.tip
+	{
+		margin-top: 10px;
+		margin-bottom: 10px;
+		padding-right: 10px;
+		padding-top: 10px;
+		padding-bottom: 10px;
+		line-height: 160%;
+		background-origin: content-box;
+		background-image: none;
+		frame-break-inside: avoid;
+		page-break-inside: avoid;
+		padding-left: 10px;
+		padding: 10px;
+		mc-auto-number-format: '{b}Tip: {/b}';
+	}
+
+	p.TOC1
+	{
+		font-variant: normal;
+		mc-heading-format: '1';
+		line-height: 12pt;
+		font-style: normal;
+		mc-hyphenate: never;
+		letter-spacing: 2px;
+		/* font: 'Eurostile LT Std Medium'; */
+		font: 'Eurostile LT Std';
+		font-family: EurostileLTStdMedium;
+		font-size: 14pt;
+		margin-top: 12px;
+		font-weight: normal;
+	}
+
+	p.TOC2
+	{
+		font-family: OpenSans-Regular, Arial, sans-serif;
+		font-style: normal;
+		font-variant: normal;
+		line-height: 12pt;
+		font-weight: normal;
+		margin-bottom: 2px;
+		margin-left: 0.25in;
+		margin-top: 2px;
+		mc-heading-format: '2';
+		font-size: 10pt;
+	}
+
+	p.TOC3
+	{
+		font-family: OpenSans-Regular, Arial, sans-serif;
+		font-style: normal;
+		font-variant: normal;
+		line-height: 12pt;
+		font-weight: normal;
+		margin-bottom: 2px;
+		margin-left: 0.5in;
+		margin-top: 2px;
+		mc-heading-format: '3';
+		font-size: 10pt;
+	}
+
+	p.TOC4
+	{
+		font-family: OpenSans-Regular, Arial, sans-serif;
+		font-style: normal;
+		font-variant: normal;
+		line-height: 12pt;
+		font-weight: normal;
+		margin-bottom: 2px;
+		margin-left: 0.75in;
+		margin-top: 2px;
+		mc-heading-format: '4';
+		font-size: 10pt;
+	}
+
+	p.TOC5
+	{
+		font-family: OpenSans-Regular, Arial, sans-serif;
+		font-style: normal;
+		font-variant: normal;
+		line-height: 12pt;
+		font-weight: normal;
+		margin-bottom: 2px;
+		margin-left: 1.00in;
+		margin-top: 2px;
+		mc-heading-format: '5';
+		font-size: 10pt;
+	}
+
+	p.TOC6
+	{
+		font-family: OpenSans-Regular, Arial, sans-serif;
+		font-style: normal;
+		font-variant: normal;
+		line-height: 12pt;
+		font-weight: normal;
+		margin-bottom: 2px;
+		margin-left: 1.25in;
+		margin-top: 2px;
+		mc-heading-format: '6';
+		font-size: 10pt;
+	}
+
+	span.mc-variable
+	{
+		/* letter-spacing: 2px; */
+	}
+
+	/* PRINT table styles ********************************************************* */
+
+	tr
+	{
+		page-break-inside: avoid;
+		mc-hyphenate: never;
+	}
+
+	td
+	{
+		mc-hyphenate: never;
+		margin-right: 8px;
+	}
+
+	span.SearchHighlight
+	{
+		background-color: #ffffff;
+	}
+}
+
+/* Online help styles ********************************************************* */
+
+@media online-help
+{
+	/* Commenting out the body properties for online-help medium so that
+the body properties defined in the default medium will be applied. */
+
+	/* body
+	{
+		font-family: OpenSans-Regular, Arial, sans-serif;
+		font-size: 1.1em;
+	} */
+
+	MadCap|relationshipsHeading
+	{
+		/*		margin-top: 30px; */
+		/* defined in default medium */
+	}
+
+	MadCap|relationshipsItem
+	{
+		/*		margin-left: 5; */
+		/* defined in default medium */
+	}
+
+	caption
+	{
+		color: ;
+	}
+}
+
+@media only screen and (max-width: 640px)
+{
+	div.ContentRow > div:nth-child(1)
+	{
+		width: 66.66667%;
+		margin-left: 0%;
+	}
+
+	div.ContentRow > div:nth-child(2)
+	{
+		width: 33.33333%;
+		margin-left: 0%;
+	}
+
+	div.NewRowClass1 > div:nth-child(1)
+	{
+		width: 33.33333%;
+		margin-left: 0%;
+	}
+
+	div.NewRowClass1 > div:nth-child(2)
+	{
+		width: 33.33333%;
+		margin-left: 0%;
+	}
+
+	div.NewRowClass1 > div:nth-child(3)
+	{
+		width: 33.33333%;
+		margin-left: 0%;
+	}
+}
+
+@media only screen and (max-width: 480px)
+{
+	div.ContentRow > div:nth-child(1)
+	{
+		width: 100%;
+		margin-left: 0%;
+	}
+
+	div.ContentRow > div:nth-child(2)
+	{
+		width: 100%;
+		margin-left: 0%;
+	}
+
+	div.NewRowClass1 > div:nth-child(1)
+	{
+		width: 100%;
+		margin-left: 0%;
+	}
+
+	div.NewRowClass1 > div:nth-child(2)
+	{
+		width: 100%;
+		margin-left: 0%;
+	}
+
+	div.NewRowClass1 > div:nth-child(3)
+	{
+		width: 100%;
+		margin-left: 0%;
+	}
+}
+

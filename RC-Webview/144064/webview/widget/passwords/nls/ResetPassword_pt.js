@@ -1,0 +1,5 @@
+//>>built
+define("webview/widget/passwords/nls/ResetPassword_pt",{"webview/nls/resetPassword":{approvalMustNotMatchLogin:"Senha de aprova\u00e7\u00e3o deve ser diferente da senha de Login.",changeApprovalPassword:"Alterar senha de aprova\u00e7\u00e3o",confirmPassword:"Confirmar nova senha",confirmPasswordRequired:"Senha de confirma\u00e7\u00e3o \u00e9 necess\u00e1ria.",incorrectPassword:"Sua senha de login est\u00e1 ausente ou incorreta.",loginMustNotMatchApproval:"A senha de login deve ser diferente da senha de aprova\u00e7\u00e3o.",
+loginPasswordRequired:"A senha de login atual \u00e9 necess\u00e1ria.",newApprovalPassword:"Nova senha de aprova\u00e7\u00e3o",newLoginPassword:"Nova senha do Login",newPasswordRequired:"Nova senha \u00e9 necess\u00e1ria.",passwordsDoNotMatch:"A nova senha n\u00e3o coincide com a senha da confirma\u00e7\u00e3o.",passwordMustChange:"Sua senha expirou e deve ser alterada.",resetPassword:"Redefinir senha",updateYourPassword:"Atualize sua senha de login.",updateApprovalPassword:"Atualize sua senha de aprova\u00e7\u00e3o.",
+_localized:{}}});
+//# sourceMappingURL=ResetPassword_pt.js.map

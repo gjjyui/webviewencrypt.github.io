@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Html Image Animation</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <style type="text/css">
+            body {
+                padding: 0;
+                margin: 0;
+                overflow: hidden;
+            }
+
+            .background{
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                z-index: -1;
+            }
+        </style>
+        <script type="text/javascript">
+            function queryToObject(/*String*/ str) {
+                // summary:
+                //		Create an object representing a de-serialized query section of a
+                //		URL. Query keys with multiple values are returned in an array.
+                //
+                // example:
+                //		This string:
+                //
+                //	|		"foo=bar&foo=baz&thinger=%20spaces%20=blah&zonk=blarg&"
+                //
+                //		results in this object structure:
+                //
+                //	|		{
+                //	|			foo: [ "bar", "baz" ],
+                    //	|			thinger: " spaces =blah",
+                    //	|			zonk: "blarg"
+                    //	|		}
+                    //
+                    //		Note that spaces and other urlencoded entities are correctly
+                    //		handled.
+
+                // FIXME: should we grab the URL string if we're not passed one?
+                var dec = decodeURIComponent, qp = str.split("&"), ret = {}, name, val;
+                for (var i = 0, l = qp.length, item; i < l; ++i) {
+                    item = qp[i];
+                    if (item.length) {
+                        var s = item.indexOf("=");
+                        if (s < 0) {
+                            name = dec(item);
+                            val = "";
+                        } else {
+                            name = dec(item.slice(0, s));
+                                    val = dec(item.slice(s + 1));
+                                }
+                                if (typeof ret[name] == "string") { // inline'd type check
+                                    ret[name] = [ret[name]];
+                                }
+
+                        if (ret[name] instanceof Array) {
+                            ret[name].push(val);
+                        } else {
+                            ret[name] = val;
+                        }
+                    }
+                }
+                return ret; // Object
+            }
+        </script>
+        <script type="text/javascript" src="../../../../../rc/locale.js"></script>
+        <script type="text/javascript">
+            var aniPath = queryToObject(window.location.search).path;
+            var baseUrl = "../../../../../dojo";
+            var locale = getLocale();
+            var dojoConfig = {
+                locale: locale,
+                extraLocale: ["en-us"],
+                async: 1,
+                tlmSiblingOfDojo: 0,
+                isDebug: 1,
+                baseUrl: baseUrl,
+
+                "packages": [
+                    {name: "dojo", location: "dojo"},
+                    {name: "dijit", location: "dijit"},
+                    {name: "anim", location: aniPath + ""}
+                ]
+            };
+        </script>
+        <script src="../../../../../dojo/dojo/dojo.js"></script>
+        <script type="text/javascript" src="./main.js"></script>
+
+
+    </head>
+    <body class="claro">
+    </body>
+</html>

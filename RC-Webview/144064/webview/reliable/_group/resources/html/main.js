@@ -1,0 +1,5 @@
+//>>built
+var animation=null;
+require(["dojo/_base/url","dojo/io-query","require"],function(a,c,f){a=c.queryToObject((new a(window.location.href)).query);var d=a.anim,e=a.path,g=a.alarmApiPath;f(["dojo/dom-construct",[e,d].join("/"),"dojo/_base/lang","dojo/_base/window","dojo/dom-style","dojo/i18n!dojo/cldr/nls/gregorian","dojo/i18n!dojo/cldr/nls/number","dojo/io-query","dojo/on","dojo/query","dojo/window","dojo/domReady!"],function(a,c){var b=/(.+)(\/.+js$)/.exec(d);null!==b&&(b=b[1],animationConstructor=function(){animationArgs={relativePath:[e,
+b].join("/")+"/",alarmApiPath:g,InteractiveAreaCallback:function(a,b){}};animation=new c(animationArgs);animation.groupElementTouched=function(a){};a.place(animation.domNode,window.document.body)},animationConstructor())})});
+//# sourceMappingURL=main.js.map

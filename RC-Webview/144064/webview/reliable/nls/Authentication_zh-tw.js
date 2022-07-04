@@ -1,0 +1,3 @@
+//>>built
+define("webview/reliable/nls/Authentication_zh-tw",{"rc/nls/errorMessages":{dataLoading:"\u8cc7\u6599\u8f09\u5165",dataSaving:"\u4fdd\u5b58\u6578\u64da",inError:"\u5728\u932f\u8aa4",unsupportedBrowser:"\u4e0d\u652f\u63f4\u7684\u700f\u89bd\u5668",internetExplorer:"\u6b64\u7cfb\u7d71\u4e0d\u652f\u63f411\u4e4b\u524d\u7684 Internet Explorer \u7248\u672c\u3002",coloringLogicError:"\u8457\u8272\u908f\u8f2f\u932f\u8aa4",_localized:{}}});
+//# sourceMappingURL=Authentication_zh-tw.js.map

@@ -1,0 +1,99 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="SKYPE_TOOLBAR" content="SKYPE_TOOLBAR_PARSER_COMPATIBLE" />
+
+    <title>Update your Approval Password.</title>
+
+    <link rel="shortcut icon" type="image/x-icon" href="@Href("~/favicon.ico")">
+    <link rel="apple-touch-icon" href="@Href("~/globe.png")" />
+    <link rel="stylesheet" media="screen,projection" type="text/css" title="currentTheme" href="@Href("~/144064/rc/themes/rcblack/rcblack.css")" />
+    <link rel="stylesheet" media="screen,projection" type="text/css" href="@Href("~/144064/webview/themes/rcblack/rcblack.css")" />
+    <link rel="stylesheet" media="screen,projection" type="text/css" href="@Href("~/144064/webview/themes/rcblack/Common.css")" />
+    <link rel="stylesheet" type="text/css" href="@Href("~/144064/webview/themes/reliable/rc.css")" media="screen,projection" />
+    <link rel="stylesheet" type="text/css" href="@Href("~/144064/rc/themes/print/print.css")" media="print" />
+
+    <script type="text/javascript" src="@Href("~/144064/rc/polyfills.js")"></script>
+    <script type="text/javascript" src="@Href("~/144064/rc/locale.js")"></script>
+    <script type="text/javascript">
+        var locale = getLocale();
+        var dojoConfig = {
+            locale: locale,
+            isDebug:false,
+            async: true,
+            baseUrl: "@Href("~/144064")",
+            packages: [
+                { name: "dgrid", location: "dgrid/dgrid" },
+                { name: "dgrid-v2", location: "dgrid-v2" },
+                { name: "dstore", location: "dstore" },
+                { name: "dojo", location: "dojo/dojo" },
+                { name: "dijit", location: "dojo/dijit" },
+                { name: "dojox", location: "dojo/dojox" },
+                { name: "put-selector", location: "dgrid/put-selector" },
+                { name: "rc", location: "rc" },
+                { name: "webview", location: "webview" },
+                { name: "xstyle", location: "dgrid/xstyle" }
+            ]
+        };
+    </script>
+    <script type="text/javascript" src="@Href("~/144064/dojo/dojo/dojo.js")"></script>
+    <script type="text/javascript" src="@Href("~/144064/webview/widget/passwords/UpdateApprovalPassword.js")"></script>
+    <!-- Load RC kernel -->
+    <script type="text/javascript">
+        require(["rc"], function () {
+            rc.appName = "@ActiveDirectoryLogin.Components.ConfigHelperWV.GetUrlSitePath(Request.ApplicationPath)";
+            rc.buildYear = "@ActiveDirectoryLogin.Components.BuildDate.GetBuildYear()";
+
+            // Require the registry, parser, Dialog, and wait for domReady
+            require([
+                "dojo/parser",
+                "webview",
+                "dojo/domReady!"
+            ], function (parser) {
+                // Explicitly parse the page
+                parser.parse();
+            });
+        });
+    </script>
+</head>
+<body class="rc webview">
+    <noscript>
+        <div class="error">
+            <h2><span class="rcBigWarningIcon"></span>Your browser has Javascript disabled!</h2>
+            <p>Web View interface requires Javascript to run.</p>
+            <p>Enable Javascript on this browser.</p>
+        </div>
+    </noscript>
+
+    <div class="mpwLogin">
+        <div class="mpwLoginWrapper">
+            <div data-dojo-type="webview/widget/passwords/UpdateApprovalPassword" data-dojo-props="userId: @ViewBag.userId, isADGroupUser: @ViewBag.isADGroupUser"></div>
+
+        </div>
+        <p class="copyright" id="copyright">
+            <span class="poweredByText">Powered by <a class="linkable" target="_blank" href="http://reliablecontrols.com/">Reliable Controls</a> &copy; 2014 - @DateTime.Now.Year. RC-WebView version: <span id="version"></span>.</span>   <br />
+
+            @if (ViewBag.CustomerName != null && ViewBag.numPoints != null)
+            {
+                if (ViewBag.numPoints == "1")
+                {
+
+                    <span class="licensedTo">Licensed To: @ViewBag.CustomerName.  Authorized for @ViewBag.numPoints system.  Updates subscription expires on @ViewBag.expires.</span>
+                }
+                else
+                {
+                    <span class="licensedTo">Licensed To: @ViewBag.CustomerName.  Authorized for @ViewBag.numPoints systems.  Updates subscription expires on @ViewBag.expires.</span>
+                }
+                <input type="hidden" id="customerName" value="@ViewBag.CustomerName" />
+                <input type="hidden" id="numPoints" value="@ViewBag.numPoints" />
+                <input type="hidden" id="expirary" value="@ViewBag.expires" />
+            }
+            else
+            {
+                <span class="licensedTo">Product not licensed.</span>
+            }
+        </p>
+    </div>
+</body>
+</html>

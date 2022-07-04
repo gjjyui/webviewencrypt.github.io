@@ -1,0 +1,3 @@
+//>>built
+define("webview/reliable/nls/Authentication_de",{"rc/nls/errorMessages":{dataLoading:"Laden von Daten",dataSaving:"Speichern von Daten",inError:"Fehler",unsupportedBrowser:"Nicht unterst\u00fctzte Browser",internetExplorer:"Internet Explorer-Versionen vor 11 werden von diesem System nicht unterst\u00fctzt.",coloringLogicError:"Farblogikfehler",_localized:{}}});
+//# sourceMappingURL=Authentication_de.js.map

@@ -1,0 +1,103 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="SKYPE_TOOLBAR" content="SKYPE_TOOLBAR_PARSER_COMPATIBLE" />
+
+    <title>Reliable Controls</title>
+
+    <link rel="stylesheet" media="screen,projection" type="text/css" title="currentTheme" href="@Href("~/144064/rc/themes/rcblack/rcblack.css")" />
+    <link rel="stylesheet" media="screen,projection" type="text/css" href="@Href("~/144064/webview/themes/reliable/rc.css")" />
+    <link rel="stylesheet" media="screen,projection" type="text/css" href="@Href("~/144064/webview/themes/rcblack/rcblack.css")" />
+    <link rel="stylesheet" media="screen,projection" type="text/css" href="@Href("~/144064/webview/themes/rcblack/Common.css")" />
+    <link rel="stylesheet" media="print" type="text/css" href="@Href("~/144064/webview/themes/print.css")" />
+
+    <link rel="stylesheet" type="text/css"
+          media="screen and (max-device-width: 1024px)"
+          href="@Href("~/144064/rc/themes/mobile/basics.css")" />
+
+    <link rel="shortcut icon" type="image/x-icon" href="@Href("~/favicon.ico")">
+    <link rel="apple-touch-icon" href="@Href("~/globe.png")" />
+
+    <script type="text/javascript" charset="utf-8" src="@Href("~/144064/rc/polyfills.js")"></script>
+    <script type="text/javascript" charset="utf-8" src="@Href("~/144064/rc/locale.js")"></script>
+    <script type="text/javascript">
+        var locale = getLocale();
+        var dojoConfig = {
+            locale: locale,
+            isDebug:false,
+            async: true,
+            gfxRenderer: "svg,silverlight,vml,canvas",
+            baseUrl: "@Href("~/144064")",
+            tlmSiblingOfDojo: false,
+            packages: [
+                { name: "dgrid", location: "dgrid/dgrid" },
+                { name: "dgrid-v2", location: "dgrid-v2" },
+                { name: "dstore", location: "dstore" },
+                { name: "dojo", location: "dojo/dojo" },
+                { name: "dijit", location: "dojo/dijit" },
+                { name: "dojox", location: "dojo/dojox" },
+                { name: "put-selector", location: "dgrid/put-selector" },
+                { name: "rc", location: "rc" },
+                { name: "webview", location: "webview" },
+                { name: "xstyle", location: "dgrid/xstyle" }
+            ]
+        };
+    </script>
+
+    <script type="text/javascript" charset="utf-8" src="@Href("~/144064/rc/util/html/html2canvas.js")"></script>
+    <script type="text/javascript" charset="utf-8" src="@Href("~/144064/dojo/dojo/dojo.js")"></script>
+    <script type="text/javascript" charset="utf-8" src="@Href("~/144064/webview/ace/ace.js")"></script>
+    <script type="text/javascript" charset="utf-8" src="@Href("~/144064/webview/ace/ext-language_tools.js")"></script>
+    <script type="text/javascript" src="@Href("~/144064/webview/webview-all.js")"></script>
+    <!-- load the RC kernel -->
+    <script type="text/javascript">
+        require(["rc"], function (rc) {
+            rc.appName = "@ActiveDirectoryLogin.Components.ConfigHelperWV.GetUrlSitePath(Request.ApplicationPath)";
+            rc.defaultTheme = "@ActiveDirectoryLogin.Components.ConfigHelperWV.GetDefaultTheme(Request.ApplicationPath, Request.AppRelativeCurrentExecutionFilePath)";
+            rc.buildYear = "@ActiveDirectoryLogin.Components.BuildDate.GetBuildYear()";
+
+            // Require the registry, parser, Dialog, and wait for domReady
+            require([
+                "dojo/parser",
+                "rc/StyleSwitcher",
+                "webview/util/util",
+                "webview",
+                "dojo/domReady!"
+            ], function (
+                parser,
+                StyleSwitcher,
+                webviewUtils
+            ) {
+                    // Explicitly parse the page
+                    parser.parse();
+                    StyleSwitcher.getDefaultTheme = webviewUtils.getDefaultTheme;
+
+                    rc.styleSwitcher = StyleSwitcher;
+                    StyleSwitcher.initialize();
+
+                    // RCWEB-4483, remove Kiosk Optimized theme until RCWEB-4456 is complete
+                    delete StyleSwitcher.themes["Kiosk optimized"];
+
+                    StyleSwitcher.setActiveTheme(document);
+                });
+        });
+    </script>
+</head>
+<body class="rc webview home">
+
+    <noscript>
+        <div class="mpwError mpwJsError">
+            <h2><span class="rcBigWarningIcon"></span>Your browser has Javascript disabled!</h2>
+            <p>MACH-ProWeb interface requires Javascript to run.</p>
+            <p>Enable Javascript on this browser.</p>
+        </div>
+    </noscript>
+
+    <div data-dojo-type="webview/ReliableSystem"
+         data-dojo-props="site: @ViewBag.SiteId, enforceChangeApproval: @(ViewBag.EnforceChangeApproval)"></div>
+
+    <div id="pageloader" class="preloader"></div>
+
+</body>
+</html>
