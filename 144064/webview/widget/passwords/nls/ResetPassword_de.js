@@ -1,5 +1,0 @@
-//>>built
-define("webview/widget/passwords/nls/ResetPassword_de",{"webview/nls/resetPassword":{approvalMustNotMatchLogin:"Genehmigung Passwort muss das Anmeldekennwort unterscheiden.",changeApprovalPassword:"Genehmigungskennwort \u00e4ndern",confirmPassword:"Neues Kennwort best\u00e4tigen",confirmPasswordRequired:"Best\u00e4tigung Kennwort ist erforderlich.",incorrectPassword:"Ihr Login-Passwort fehlt oder ist falsch.",loginMustNotMatchApproval:"Das Anmeldekennwort muss sich vom Genehmigungskennwort unterscheiden.",
-loginPasswordRequired:"Das aktuelle Login-Passwort ist erforderlich.",newApprovalPassword:"Neue Genehmigung Passwort",newLoginPassword:"Neue Login-Passwort",newPasswordRequired:"Neues Passwort ist erforderlich.",passwordsDoNotMatch:"Das neue Kennwort und die Eingabe im Best\u00e4tigungsfeld stimmen nicht \u00fcberein.",passwordMustChange:"Ihr Kennwort ist abgelaufen und muss ge\u00e4ndert werden.",resetPassword:"Kennwort zur\u00fccksetzen",updateYourPassword:"Aktualisieren Sie Ihr Login-Passwort.",
-updateApprovalPassword:"Aktualisieren Sie Ihr Genehmigungskennwort.",_localized:{}}});
-//# sourceMappingURL=ResetPassword_de.js.map

@@ -1,5 +1,0 @@
-//>>built
-var animation=null;
-require(["dojo/_base/url","dojo/io-query","require"],function(a,d,f){a=d.queryToObject((new a(window.location.href)).query);var e=a.anim,b=a.path,g=a.gelIndex;a=/^\/([a-z0-9]+)\/.+/i.exec(window.location.pathname);null!==a&&2===a.length&&(b="/"+a[1]+b);f(["dojo/dom-construct",[b,e].join("/"),"dojo/_base/lang","dojo/_base/window","dojo/dom-style","dojo/i18n!dojo/cldr/nls/gregorian","dojo/i18n!dojo/cldr/nls/number","dojo/io-query","dojo/on","dojo/query","dojo/window","dojo/domReady!"],function(a,d){var c=
-/(.+)(\/.+js$)/.exec(e);c&&(c=c[1],animation=new d({id:"animation_index_"+g,relativePath:[b,c].join("/")+"/",InteractiveAreaCallback:function(a,b){}}),animation.groupElementTouched=function(a){},a.place(animation.domNode,window.document.body))})});
-//# sourceMappingURL=main.js.map

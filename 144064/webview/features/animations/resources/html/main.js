@@ -1,5 +1,0 @@
-//>>built
-require("dojo/_base/array dojo/dom-construct dojo/Deferred dojo/_base/lang dojo/_base/window dojo/dom-style dojo/i18n!dojo/cldr/nls/gregorian dojo/i18n!dojo/cldr/nls/number dojo/io-query dojo/on dojo/query dojo/window dojo/domReady!".split(" "),function(d,e,f){animationLoader=function(a){var b=new f;require([a],function(a){animationConstructor=function(b){return animation=new a(b,e.create("span",null,window.document.body))};b.resolve(animationConstructor)});return b};window.originalSetInterval=window.setInterval;
-window.setInterval=function(a,b){window.activeIntervals||(window.activeIntervals=[]);var c=window.originalSetInterval(a,b);window.activeIntervals.push(c);return c};window.originalClearInterval=window.clearInterval;window.clearInterval=function(a){window.originalClearInterval(a);window.activeIntervals&&(a=window.activeIntervals.indexOf(a),0<=a&&window.activeIntervals.splice(a,1))};window.clearAllIntervals=function(){window.activeIntervals&&(d.forEach(window.activeIntervals,function(a){window.originalClearInterval(a)}),
-window.activeIntervals=[])}});
-//# sourceMappingURL=main.js.map

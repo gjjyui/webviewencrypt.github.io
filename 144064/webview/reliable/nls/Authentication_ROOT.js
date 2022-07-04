@@ -1,3 +1,0 @@
-//>>built
-define("webview/reliable/nls/Authentication_ROOT",{"rc/nls/errorMessages":{dataLoading:"Data Loading",dataSaving:"Saving Data",inError:"In Error",unsupportedBrowser:"Unsupported Browser",internetExplorer:"Internet Explorer versions prior to 11 are not supported by this system.",coloringLogicError:"Coloring logic error",_localized:{de:1,es:1,"es-es":1,fr:1,"fr-ca":1,pt:1,zh:1,"zh-tw":1}}});
-//# sourceMappingURL=Authentication_ROOT.js.map
